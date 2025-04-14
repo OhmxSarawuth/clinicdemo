@@ -1,38 +1,107 @@
-.App {
-  text-align: center;
+/* App.css */
+.container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input[type="file"] {
+  margin-bottom: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.filters {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.filters input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1 1 200px;
+}
+
+.sort-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.sort-buttons button {
+  padding: 6px 12px;
+  border: none;
+  background-color: #3498db;
   color: white;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.sort-buttons button:hover {
+  background-color: #2980b9;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #f1f1f1;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+@media (max-width: 768px) {
+  table {
+    width: 100%;
+    border-collapse: collapse;
   }
-  to {
-    transform: rotate(360deg);
+
+  thead {
+    display: none;
+  }
+
+  tbody tr {
+    display: block;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 0.5rem;
+  }
+
+  tbody td {
+    display: block;
+    text-align: left;
+    padding: 4px 8px;
+  }
+
+  .main-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+
+  .sub-info {
+    font-size: 0.85rem;
+    color: #555;
+  }
+}
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
   }
 }
